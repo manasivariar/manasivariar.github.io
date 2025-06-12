@@ -5,12 +5,12 @@ const ExperienceSection = () => {
   const [timelineProgress, setTimelineProgress] = useState(0);
   const [expandedIndex, setExpandedIndex] = useState(null);
   const experiences = [{
-    role: 'Senior Robotics Engineer',
-    company: 'Boston Dynamics',
-    period: '2022 - Present',
-    logo: 'https://upload.wikimedia.org/wikipedia/en/0/04/Boston_Dynamics_logo.svg',
-    responsibilities: ['Lead a team of 5 engineers developing perception algorithms for quadruped robots', 'Implemented real-time obstacle avoidance using deep reinforcement learning', 'Reduced computation requirements by 40% while maintaining performance'],
-    technologies: ['ROS', 'C++', 'Python', 'PyTorch', 'CUDA'],
+    role: 'Data Engineer',
+    company: 'LTIMindtree Ltd.',
+    period: 'Jan 2022 - July 2024',
+    // logo: 'https://upload.wikimedia.org/wikipedia/en/0/04/Boston_Dynamics_logo.svg',
+    responsibilities: ['Engineered highly scalable data pipelines with Spark & Hadoop, handling 10M+ daily transactions, reducing batch processing time by 35%.','Designed executive dashboards and real-time reporting solutions using Tableau, Power BI, and Google Data Studio, improving organizational decision-making speed by 25%.','Automated ETL processes and data validation with custom Python scripts and optimized Oracle PL/SQL queries, cutting manual reporting tasks by 40%.', 'Led complex data analytics initiatives using Python (Pandas, NumPy, Seaborn) to uncover hidden trends, directly increasing operational efficiency by 20%.'],
+    technologies: ['Python', 'Hadoop', 'Tableau', 'Spark', 'Oracle PL/SQL', 'Power BI', 'Google Data Studio', 'Machine Learning'],
     skills: [{
       name: 'Team Leadership',
       level: 5
@@ -23,30 +23,12 @@ const ExperienceSection = () => {
     }],
     impact: 'Increased robot navigation accuracy by 35% in complex environments'
   }, {
-    role: 'Robotics Software Developer',
-    company: 'Waymo',
-    period: '2019 - 2022',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Waymo_logo.svg/512px-Waymo_logo.svg.png',
-    responsibilities: ['Developed and optimized path planning algorithms for autonomous vehicles', 'Implemented sensor fusion techniques for improved environmental awareness', 'Contributed to the simulation framework for testing edge cases'],
-    technologies: ['C++', 'Python', 'TensorFlow', 'CARLA', 'ROS'],
-    skills: [{
-      name: 'Path Planning',
-      level: 5
-    }, {
-      name: 'Sensor Fusion',
-      level: 4
-    }, {
-      name: 'Simulation',
-      level: 4
-    }],
-    impact: 'Reduced decision-making latency by 28% in critical scenarios'
-  }, {
-    role: 'Research Intern',
-    company: 'NASA JPL',
-    period: 'Summer 2018',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/NASA_Jet_Propulsion_Laboratory_logo.svg/512px-NASA_Jet_Propulsion_Laboratory_logo.svg.png',
-    responsibilities: ['Designed algorithms for autonomous navigation in GPS-denied environments', 'Implemented SLAM techniques for planetary rover prototypes', 'Published research findings in IEEE Robotics and Automation Letters'],
-    technologies: ['MATLAB', 'Python', 'ROS', 'OpenCV'],
+    role: 'Machine Learning Intern',
+    company: 'Clover Continuity',
+    period: 'June 2021 - Sept 2021',
+    // logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/NASA_Jet_Propulsion_Laboratory_logo.svg/512px-NASA_Jet_Propulsion_Laboratory_logo.svg.png',
+    responsibilities: ['Developed automated data extraction systems across 20+ financial platforms, saving over 15 weekly hours of manual effort.', 'Implemented data cleaning by handling missing data, removing outliers, and standardizing formats using Pandas & NumPy, enhancing dataset accuracy for downstream analysis by 98%.','Evaluated and fine-tuned predictive models including Random Forest and Gradient Boosting to forecast stock price movements, increasing equity prediction accuracy by 20% compared to previous models.'],
+    technologies: ['Python', 'Machine Learning', 'Data Analysis', 'Pandas', 'NumPy', 'Scikit-learn'],
     skills: [{
       name: 'Research',
       level: 4
