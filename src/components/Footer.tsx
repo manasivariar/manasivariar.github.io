@@ -16,9 +16,7 @@ const Footer = () => {
           />
           <div className="text-gray-400 text-center max-w-md">
             <p className="mb-4">
-              "Building intelligent machines that can perceive, learn, and
-              interact with the world is not just my profession - it's my
-              passion."
+              "Curiosity and Passion built this space."
             </p>
             <div className="text-sm">
               <a
