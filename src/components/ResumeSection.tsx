@@ -156,7 +156,7 @@ const ResumeSection = () => {
             <h3 className="text-2xl font-bold text-gray-100">Certifications</h3>
           </div>
           <div className="bg-gray-800 p-6 rounded-lg shadow-sm border border-gray-700">
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-gray-300">
+            <ul className="grid grid-cols-2 sm:grid-cols-2 gap-4 text-gray-300">
               {certifications.map((cert, idx) => (
                 <li key={idx} className="flex items-center">
                   <div className="h-2 w-2 bg-indigo-400 rounded-full mr-2" />
