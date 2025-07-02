@@ -84,8 +84,8 @@ const ProjectsSection = () => {
     image: img5,
     tags: ['Retrieval-Augmented Generation (RAG)', 'Multi-Agent Systems', 'GPU-Accelerated Computing', 'Personalized Learning Systems'],
     github: 'https://github.com/manasivariar/Multi-Agentic-AI-Tutor-Hackathon',
-    demo: null,
-    learnMore: null,
+    demo: 'https://drive.google.com/file/d/1kmp5KvXKu9-ASmtqxtiQazOUgmyq7hUY/view?usp=drive_link',
+    learnMore: 'https://drive.google.com/file/d/1eOs-Poyrw9PYOfD-Ozq1CHHWGSyufsaR/view?usp=drive_link',
     details: "Synapse is an intelligent AI tutor that teaches data science. It creates a personalized learning plan for you, shows you how to write faster code using NVIDIA GPUs, and then proves how much faster the code is by running a live speed test on ASU's supercomputer.",
     category: 'Hackathon',
     stats: {
