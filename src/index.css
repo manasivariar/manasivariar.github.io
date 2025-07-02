@@ -388,3 +388,9 @@ h1, h2, h3, .font-mono, code, pre, .navbar-brand {
   position: relative;
   transition: transform 0.2s cubic-bezier(0.17, 0.67, 0.83, 0.67);
 }
+@layer base {
+  html {
+    /* match this to your header’s real height */
+    scroll-padding-top: 2rem;
+  }
+}

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { ChevronDownIcon, CodeIcon, BrainIcon, ServerIcon, TerminalIcon } from 'lucide-react';
+import { CodeIcon, BrainIcon, ServerIcon, TerminalIcon, LinkedinIcon, GithubIcon, MailIcon } from 'lucide-react';
 import ScrollIndicator from './ScrollIndicator';
 const HeroSection = () => {
   const orb1Ref = useRef(null);
@@ -86,14 +86,6 @@ const HeroSection = () => {
       window.removeEventListener('mousemove', handleMouseMove);
     };
   }, []);
-  const scrollToAbout = () => {
-    const aboutSection = document.getElementById('about');
-    if (aboutSection) {
-      aboutSection.scrollIntoView({
-        behavior: 'smooth'
-      });
-    }
-  };
   return <section id="home" ref={containerRef} className="min-h-screen w-full flex flex-col justify-center items-center relative overflow-hidden">
       <div className="absolute inset-0 z-0">
         <div ref={orb1Ref} className="absolute top-20 left-10 md:left-20 w-32 h-32 md:w-48 md:h-48 rounded-full bg-indigo-600/20 blur-xl transition-transform duration-1000 ease-in-out"></div>
@@ -103,7 +95,7 @@ const HeroSection = () => {
         <div ref={orb4Ref} className="absolute top-1/4 right-1/4 w-24 h-24 md:w-40 md:h-40 rounded-full bg-cyan-600/15 blur-xl transition-transform duration-1000 ease-in-out"></div>
         <div ref={orb5Ref} className="absolute bottom-1/3 left-1/3 w-36 h-36 md:w-52 md:h-52 rounded-full bg-indigo-500/15 blur-xl transition-transform duration-1000 ease-in-out"></div>
       </div>
-      <div className="container mx-auto px-4 z-10 text-center">
+      <div className="container mb-20 mx-auto px-4 z-10 text-center">
         {/* Animated code icons with parallax effect */}
         <div className="flex justify-center mb-8 space-x-6">
           <div className="p-4 bg-gray-800/80 backdrop-blur-sm rounded-xl shadow-lg animate-float-slow parallax" data-speed="0.05">
@@ -130,13 +122,19 @@ const HeroSection = () => {
           <p className="text-xl md:text-2xl text-gray-300 mt-2">
             "Where Algorithms Meet Autonomy."
           </p>
+          {/* ─── Mobile-only socials below tagline ─── */}
+          <div className="flex md:hidden justify-center space-x-6 mt-4">
+            <a href="https://www.linkedin.com/in/manasivariar/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-indigo-400">
+              <LinkedinIcon size={24} />
+            </a>
+            <a href="https://github.com/manasivariar" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-indigo-400">
+              <GithubIcon size={24} />
+            </a>
+            <a href="mailto:mrajanva@asu.edu" className="text-gray-300 hover:text-indigo-400">
+              <MailIcon size={24} />
+            </a>
+          </div>
         </div>
-        {/* Glowing button */}
-        <button onClick={scrollToAbout} className="mt-8 glow-effect rounded-full p-3 bg-gray-800/50 hover:bg-gray-700/80 transition-colors animate-fade-in-up" style={{
-        animationDelay: '0.8s'
-      }}>
-          <ChevronDownIcon size={24} className="text-indigo-400" />
-        </button>
       </div>
       {/* Animated scroll indicator */}
       <ScrollIndicator targetId="about" />

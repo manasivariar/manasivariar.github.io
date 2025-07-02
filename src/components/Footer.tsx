@@ -17,16 +17,21 @@ const Footer = () => {
           <div className="text-gray-400 text-center max-w-md">
             <p className="mb-4">
               "Building intelligent machines that can perceive, learn, and
-              interact with the world is not just my profession—it's my
+              interact with the world is not just my profession - it's my
               passion."
             </p>
             <div className="text-sm">
-              <p className="mb-1">jane.doe@example.com</p>
+              <a
+                href="mailto:mrajanva@asu.edu"
+                className="mb-1 inline-block text-indigo-400 hover:underline"
+              >
+                mrajanva@asu.edu
+              </a>
               <p>Built with React and ❤️</p>
             </div>
           </div>
           <div className="mt-8 text-sm text-gray-500">
-            © {new Date().getFullYear()} Jane Doe. All rights reserved.
+            © {new Date().getFullYear()} Manasi Variar. All rights reserved.
           </div>
         </div>
       </div>

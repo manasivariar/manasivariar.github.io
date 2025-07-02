@@ -90,17 +90,18 @@ export function App() {
       {/* stack on mobile, row on md+ */}
       <div className="flex flex-col md:flex-row flex-1 overflow-hidden">
         <Navbar />
-        <main className="flex-1 overflow-auto md:ml-64 p-4">
+        <main className="flex-1 overflow-auto md:ml-64 pl-0">
           <HeroSection />
           <AboutSection />
           <ResumeSection />
           <ExperienceSection />
           <ProjectsSection />
+          <Footer />
         </main>
       </div>
 
       {/* footer always at end, full-width */}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

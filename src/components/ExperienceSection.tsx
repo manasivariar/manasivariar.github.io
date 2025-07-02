@@ -21,7 +21,7 @@ const ExperienceSection = () => {
       name: 'System Optimization',
       level: 4
     }],
-    impact: 'Increased robot navigation accuracy by 35% in complex environments'
+    impact: 'Improved data infrastructure and reporting workflows to boost processing speed, decision-making, and operational efficiency across large-scale systems.'
   }, {
     role: 'Machine Learning Intern',
     company: 'Clover Continuity',
@@ -30,17 +30,20 @@ const ExperienceSection = () => {
     responsibilities: ['Developed automated data extraction systems across 20+ financial platforms, saving over 15 weekly hours of manual effort.', 'Implemented data cleaning by handling missing data, removing outliers, and standardizing formats using Pandas & NumPy, enhancing dataset accuracy for downstream analysis by 98%.','Evaluated and fine-tuned predictive models including Random Forest and Gradient Boosting to forecast stock price movements, increasing equity prediction accuracy by 20% compared to previous models.'],
     technologies: ['Python', 'Machine Learning', 'Data Analysis', 'Pandas', 'NumPy', 'Scikit-learn'],
     skills: [{
-      name: 'Research',
+      name: 'Problem-Solving',
       level: 4
     }, {
-      name: 'SLAM',
+      name: 'Analytical Thinking',
       level: 3
     }, {
-      name: 'Technical Writing',
+      name: 'Initiative',
       level: 4
     }],
-    impact: 'Algorithm adopted for future Mars rover navigation systems'
+    impact: 'Streamlined financial data workflows and improved model accuracy, saving time and enhancing prediction reliability.'
   }];
+  // const timelineHeight = 0;
+  const [th, setTimelineHeight] = useState(0);
+
   useEffect(() => {
     // Animate timeline as user scrolls
     const handleScroll = () => {
@@ -48,6 +51,7 @@ const ExperienceSection = () => {
       const timeline = timelineRef.current;
       const timelineRect = timeline.getBoundingClientRect();
       const timelineTop = timelineRect.top;
+      setTimelineHeight(timelineRect.height);
       const timelineHeight = timelineRect.height;
       const windowHeight = window.innerHeight;
       // Calculate how far down the timeline we've scrolled
@@ -76,7 +80,7 @@ const ExperienceSection = () => {
   const toggleExpand = index => {
     setExpandedIndex(expandedIndex === index ? null : index);
   };
-  return <section id="experience" className="py-20 bg-gray-800">
+  return <section id="experience" className="md:scroll-mt-[-4rem] py-20 bg-gray-800">
       <div className="container mx-auto px-4 md:px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-100 mb-12">
           Work <span className="text-indigo-400">Experience</span>
@@ -84,9 +88,9 @@ const ExperienceSection = () => {
         <div className="max-w-4xl mx-auto">
           <div ref={timelineRef} className="relative">
             {/* Timeline line with animation */}
-            <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 h-full w-0.5 bg-indigo-900/50 overflow-hidden">
+            <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-0.5 bg-indigo-900/50 overflow-hidden" style={{height: `${th-8}px`}}>
               <div className="timeline-line absolute top-0 left-0 w-full bg-indigo-400" style={{
-              height: `${timelineProgress}%`
+              height: `${timelineProgress*1.05}%`
             }}></div>
             </div>
             {/* Experience items */}

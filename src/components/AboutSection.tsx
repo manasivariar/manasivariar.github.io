@@ -6,25 +6,25 @@ const AboutSection = () => {
   // Skill data with proficiency percentages
   const skills = [{
     icon: <CodeIcon size={24} />,
-    label: 'Python, C++, ROS',
+    label: 'Python, Robotics',
     proficiency: 90,
     description: 'Expert in robotics programming languages and frameworks'
   }, {
     icon: <CpuIcon size={24} />,
-    label: 'Hardware Integration',
-    proficiency: 85,
+    label: 'Competitive Programming',
+    proficiency: 92,
     description: 'Specialized in connecting software with physical components'
   }, {
     icon: <BrainIcon size={24} />,
-    label: 'Machine Learning',
-    proficiency: 80,
+    label: 'Machine Learning, MATLAB',
+    proficiency: 85,
     description: 'Deep learning for computer vision and decision-making'
   }, {
     icon: <DatabaseIcon size={24} />,
     label: 'Data Analysis',
-    proficiency: 75,
+    proficiency: 90,
     description: 'Processing and interpreting sensor data for insights'
-  }];
+  },];
   // Setup tilt effect
   useEffect(() => {
     const handleTilt = (e, index) => {
@@ -89,25 +89,17 @@ const AboutSection = () => {
     });
     return () => observer.disconnect();
   }, []);
-  return <section id="about" className="py-20 bg-gray-800">
+  return <section id="about" className="md:scroll-mt-[-4rem] py-20 bg-gray-800">
       <div className="container mx-auto px-4 md:px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-100 mb-12">
           About <span className="text-indigo-400">Me</span>
         </h2>
         <div className="max-w-3xl mx-auto">
           <p className="text-lg text-gray-300 mb-8 leading-relaxed animate-slide-left">
-            I'm a passionate Robotics Software Engineer with a deep fascination
-            for the intersection of AI and physical systems. My journey began
-            with building simple robots in my garage and evolved into developing
-            sophisticated algorithms for autonomous navigation and
-            decision-making.
+            Hey there! - I'm <span className="text-indigo-400">Manasi</span>, a passionate and ever-curious Robotics Software Engineer and AI/ML enthusiast. My journey started in computer science, took me through the worlds of software development and data engineering, and now has me deep in the exciting space of Robotics and Artificial Intelligence as a Master’s student at Arizona State University.
           </p>
           <p className="text-lg text-gray-300 mb-12 leading-relaxed animate-slide-right">
-            With expertise spanning both software development and robotics
-            engineering, I bring a unique perspective to creating intelligent
-            systems that can perceive, learn, and interact with the world. I'm
-            driven by the belief that robotics has the potential to solve some
-            of humanity's most pressing challenges.
+            You could call me a <span className="italic">jack of all trades, master of none</span> (I know, risky to admit) - but that’s because I’ve been busy exploring by taking scenic route. I’ve worked on everything from simple competitive coding to building real-time systems with LLMs and microcontrollers. I’m still learning, but I’ve built a few things I’m proud of. Check out the Projects section to see what I’ve been experimenting with.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             {skills.map((skill, index) => <div key={index} ref={el => cardRefs.current[index] = el} className="interactive-card flex flex-col items-center p-4 bg-gray-700/50 rounded-lg hover:bg-gray-700 transition-colors">
@@ -115,58 +107,49 @@ const AboutSection = () => {
                   <div className="text-indigo-400 mb-2 card-icon">
                     {skill.icon}
                   </div>
-                  <p className="text-gray-200 text-center font-medium">
+                  <div className='card-inner flex flex-col items-center py-4'>
+                  <p className="md:min-h-[3rem] text-gray-200 text-center font-medium">
                     {skill.label}
                   </p>
+                  </div>
                   {/* Skill percentage bar */}
                   <div className="mt-3 w-full bg-gray-600/50 rounded-full h-2">
                     <div className="stat-bar" data-percentage={skill.proficiency} style={{
                   '--percentage': `${skill.proficiency}%`
                 }}></div>
                   </div>
-                  {/* Tooltip with description - appears on hover */}
-                  <div className="mt-2 text-xs text-gray-400 text-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    {skill.description}
-                  </div>
                 </div>
               </div>)}
           </div>
           <div className="bg-gradient-to-r from-indigo-900/30 to-purple-900/30 p-6 rounded-lg border border-indigo-900/20 animate-zoom">
             <h3 className="text-xl font-semibold text-gray-100 mb-4 reveal-line">
-              {/* I'm open for collaboration on exciting robotics projects! */}
               I'm open for below roles:
             </h3>
-            <ul className="space-y-4">
-              {[{
-              fact: 'AI/ML Engineer',
-              value: 14,
-              label: 'Age'
-            }, {
-              fact: 'Robotics Software Engineer',
-              value: 3,
-              label: 'Frameworks'
-            }, {
-              fact: 'Software Development Engineer',
-              value: 2,
-              label: 'Conferences'
-            }, {
-              fact: 'Data Scientist/Data Analyst/Business Analyst',
-              value: 5,
-              label: 'Teams Mentored'
-            }].map((item, idx) => <li key={idx} className="flex items-center justify-between group">
-                  <div className="flex items-center">
-                    <span className="h-2 w-2 bg-indigo-400 rounded-full mr-3 group-hover:scale-150 transition-transform"></span>
-                    <span className="text-gray-300">{item.fact}</span>
-                  </div>
-                  {/* Animated number display */}
-                  <div className="bg-indigo-900/30 px-3 py-1 rounded-full flex flex-col items-center min-w-[60px]">
-                    <span className="text-indigo-300 font-bold">
-                      {item.value}
-                    </span>
-                    <span className="text-gray-400 text-xs">{item.label}</span>
-                  </div>
-                </li>)}
-            </ul>
+            <div className="grid grid-cols-[min-content,1fr] gap-x-4 gap-y-2 mb-4">
+              {[
+                'AI/ML Engineer',
+                'Robotics Software Engineer',
+                'Data Scientist/Data Analyst/Business Analyst',
+                'Software Development Engineer'
+              ].map((role, idx) => (
+                <React.Fragment key={idx}>
+                  {/* bullet cell */}
+                  <span className="block h-1 w-1 bg-white rounded-full mt-2.5" />
+                  {/* text cell */}
+                  <span className="text-gray-300">{role}</span>
+                </React.Fragment>
+              ))}
+            </div>
+            {/* <ul className="list-disc list-inside space-y-2 text-gray-300">
+              {[
+                'AI/ML Engineer',
+                'Robotics Software Engineer',
+                'Software Development Engineer',
+                'Data Scientist/Data Analyst/Business Analyst'
+              ].map(role => (
+                <li key={role}>{role}</li>
+              ))}
+            </ul> */}
           </div>
         </div>
       </div>
