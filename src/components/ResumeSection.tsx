@@ -158,8 +158,8 @@ const ResumeSection = () => {
           <div className="bg-gray-800 p-6 rounded-lg shadow-sm border border-gray-700">
             <ul className="grid grid-cols-2 sm:grid-cols-2 gap-4 text-gray-300">
               {certifications.map((cert, idx) => (
-                <li key={idx} className="flex items-center">
-                  <div className="h-2 w-2 bg-indigo-400 rounded-full mr-2" />
+                <li key={idx} className="flex items-start">
+                  <div className="mt-2 h-2 w-2 bg-indigo-400 rounded-full flex-shrink-0 mr-2" />
                   {cert}
                 </li>
               ))}
